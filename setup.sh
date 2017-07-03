@@ -1,5 +1,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+brew tap caskroom/drivers
+brew cask install sonos
 brew cask install visual-studio-code
 brew cask install google-chrome
 brew cask install 1password
@@ -14,6 +16,10 @@ brew cask install sequel-pro
 brew cask install tower
 brew cask install kaleidoscope
 brew cask install microsoft-office
+brew cask install skype
+brew cask install postman
+brew cask install flux
+brew cask install bettertouchtool
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 code --install-extension zuangtongfa.material-theme
 code --install-extension eamodio.gitlens
@@ -92,4 +98,3 @@ sudo systemsetup -setrestartfreeze on
 # Show battery percentage by default
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
- 
