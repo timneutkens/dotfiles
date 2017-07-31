@@ -1,6 +1,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 brew tap caskroom/drivers
+brew tap caskroom/fonts
 brew cask install sonos
 brew cask install visual-studio-code
 brew cask install google-chrome
@@ -20,6 +21,10 @@ brew cask install skype
 brew cask install postman
 brew cask install flux
 brew cask install bettertouchtool
+brew cask install touchswitcher
+brew install hub
+# Install Fira Code font
+brew cask install font-fira-code
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 code --install-extension zuangtongfa.material-theme
 code --install-extension eamodio.gitlens
@@ -53,9 +58,6 @@ xcode-select --install
 # Remove All Unavailable Simulators
 xcrun simctl delete unavailable
 
-# Add a Stack with Recent Applications
-defaults write com.apple.dock persistent-others -array-add '{ "tile-data" = { "list-type" = 1; }; "tile-type" = "recents-tile"; }' && killall Dock
-
 # Use your touchpad or mouse scroll wheel to interact with Dock items. Allows you to use an upward scrolling gesture to open stacks. Using the same gesture on applications that are running invokes Exposé/Mission Control.
 defaults write com.apple.dock scroll-to-open -bool true && killall Dock
 
@@ -77,10 +79,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Set Current Folder as Default Search Scope in Finder
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-# Enable quit finder
-defaults write com.apple.finder QuitMenuItem -bool true && \
-killall Finder
-
 # Expand save window by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true && \
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
@@ -98,3 +96,7 @@ sudo systemsetup -setrestartfreeze on
 # Show battery percentage by default
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
+# Ask password after screensaver
+defaults write com.apple.screensaver askForPassword -bool true
+defaults write com.apple.screensaver askForPasswordDelay 0
+defaults -currentHost write com.apple.screensaver idleTime 300
