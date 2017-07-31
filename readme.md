@@ -13,3 +13,7 @@ cd dotfiles
 ```
 bash setup.sh
 ```
+
+```
+cp .zshrc ~/.zshrc
+```
