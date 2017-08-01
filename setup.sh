@@ -3,6 +3,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 brew tap caskroom/drivers
 brew tap caskroom/fonts
 brew cask install sonos
+brew cask install vlc
 brew cask install visual-studio-code
 brew cask install google-chrome
 brew cask install 1password
